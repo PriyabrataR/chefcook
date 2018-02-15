@@ -21,7 +21,7 @@ cookbook_file "/var/www/html/index.html" do
    source "index.html"
 end
 execute 'sample_execution' do
-   command 'wget google.com -o /tmp/index.html'
+   command 'wget google.com -O /tmp/index.html'
    not_if {File.exists?("/tmp/index.html")}
 end
 
